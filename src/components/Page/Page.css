@@ -1,5 +1,56 @@
-.main {
-  height: 90vh;
+.page {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  font-size: 0.9em;
+}
+
+.card span {
+  display: block;
+  margin: 8px 0;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.card a {
+  display: block;
+  margin-top: 8px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+
+  .page{
+    margin-top: 50px;
+  }
+
 }

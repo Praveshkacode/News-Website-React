@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Page from './components/Page/Page'
-import Footer from './components/Footer/Footer'
 import './App.css' 
 
 const App = () => {
+  const [category,setCategory]=useState('India');
   return (
     <div className='app'>
-      <Navbar />
-      <Page />
-      <Footer />
+      <Navbar setCategory={setCategory} />
+      <Page category={category}/>
     </div>
   )
 }

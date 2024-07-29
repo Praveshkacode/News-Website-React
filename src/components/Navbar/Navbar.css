@@ -1,39 +1,129 @@
-.navbar {
-    background-color: rgb(45, 0, 87);
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    height: 60px;
+:root {
+    --primary-text-color: #1b3b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-text-color);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .flex {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 10px; 
-    box-sizing: border-box;
-}
-
-.navbar h2 {
-    margin: 0;
-    font-size: 30px;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        height: 50px; 
-        padding: 0 5px; 
+  }
+  
+  .container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  
+  nav {
+    background-color: rgb(34, 191, 219);
+    box-shadow: 0 0 4px #4578a3;
+    position: fixed;
+    top: 0;
+    z-index: 98;
+    left: 0;
+    right: 0;
+  }
+  
+  .main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+  }
+  
+  .company-logo {
+    width: 150px;
+    height: 60px;
+  }
+  
+  .nav-links ul {
+    gap: 16px;
+  }
+  
+  .hover-link {
+    cursor: pointer;
+  }
+  
+  .hover-link:hover {
+    color: var(--secondary-text-color);
+  }
+  
+  .hover-link:active {
+    color: rgb(84, 2, 3);
+  }
+  
+  .nav-itms.active {
+    color: var(--accent-color);
+  }
+  
+  .search-bar {
+    height: 32px;
+    gap: 8px;
+  }
+  
+  .news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 5px;
+    border: 2.5px solid #bbdbe2;
+    font-family: sans-serif;
+  }
+  
+  .search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+  
+  .search-button:hover {
+    background-color: var(--accent-color-dark);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .main-nav {
+      flex-direction: row;
+      justify-content: space-between;
     }
-
-    .navbar h2 {
-        font-size: 24px; 
+  
+    .company-logo {
+      width: 100px;
+      height: 40px;
     }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        height: 40px; 
-        padding: 0 5px; 
+  
+    .nav-links {
+      display: none;
     }
-
-    .navbar h2 {
-        font-size: 18px; 
+  
+    .search-bar {
+      width: auto;
+      display: flex;
+      gap: 4px;
     }
-}
+  
+    .news-input {
+      width: 150px;
+      padding: 4px;
+      font-size: 14px;
+    }
+  
+    .search-button {
+      width: auto;
+      padding: 4px 12px;
+      font-size: 14px;
+    }
+  }
+  
